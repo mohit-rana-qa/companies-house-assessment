@@ -1,17 +1,37 @@
 name: CI Playwright
-on:{push:{branches:[main]},pull_request:{branches:[main]}}
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:{node-version:'20'}
-      - name: Install
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
         working-directory: playwright-ts
         run: |
           npm ci
           npx playwright install --with-deps
-      - name: Test
+
+      - name: Run Playwright tests
         working-directory: playwright-ts
-        run: npm test
+        run: npx playwright test --reporter=junit,html
+
+      - name: Upload Playwright HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-ts/playwright-report

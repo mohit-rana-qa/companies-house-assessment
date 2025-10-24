@@ -1,0 +1,1 @@
+import http from 'k6/http'; export const options={vus:1,duration:'30s'}; export default function(){ const r=http.get('https://automationintesting.online/room'); if(r.status!==200) { throw new Error('rooms not 200'); } }

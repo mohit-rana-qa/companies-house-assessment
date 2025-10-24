@@ -1,0 +1,1 @@
+import { test } from '@playwright/test'; import { runA11y } from '../src/utils/a11y'; for(const path of ['/', '/#/rooms']){ test(`a11y ${'${path}' } @a11y`, async ({page})=>{ await page.goto(path); await runA11y(page); }); }

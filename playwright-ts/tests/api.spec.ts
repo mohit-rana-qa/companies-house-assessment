@@ -1,0 +1,1 @@
+import { test, expect, request } from '@playwright/test'; import { Api } from '../src/api/api'; test('health & rooms @api', async ()=>{ const ctx=await request.newContext(); const api=new Api(ctx); const health=await api.health(); expect(health.status).toBe('UP'); await api.rooms(); await ctx.dispose(); });

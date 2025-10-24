@@ -1,0 +1,1 @@
+export class AdminPage { constructor(private page:any){} async gotoLogin(){await this.page.goto('/#/admin');} async login(e:string,p:string){await this.page.getByLabel(/email/i).fill(e); await this.page.getByLabel(/password/i).fill(p); await this.page.getByRole('button',{name:/login/i}).click();}}

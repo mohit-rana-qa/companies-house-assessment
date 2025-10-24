@@ -1,0 +1,1 @@
+export class HomePage { constructor(private page:any){} async goto(){await this.page.goto('/');} roomsLink(){return this.page.getByRole('link',{name:/rooms/i});}}

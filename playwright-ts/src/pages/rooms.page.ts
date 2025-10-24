@@ -1,0 +1,1 @@
+export class RoomsPage { constructor(private page:any){} async goto(){await this.page.goto('/#/rooms');} cards(){return this.page.locator('[data-testid=room-card], .room');} async firstBookButton(){return this.page.getByRole('button',{name:/book/i}).first();}}

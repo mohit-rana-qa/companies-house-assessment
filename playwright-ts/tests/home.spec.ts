@@ -1,0 +1,1 @@
+import { test, expect } from '@playwright/test'; import { HomePage } from '../src/pages/home.page'; import { RoomsPage } from '../src/pages/rooms.page'; test('home to rooms @smoke', async ({page})=>{ const home=new HomePage(page); await home.goto(); await home.roomsLink().click(); const rooms=new RoomsPage(page); await expect(rooms.cards()).toBeVisible();});

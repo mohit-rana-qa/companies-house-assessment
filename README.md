@@ -14,7 +14,7 @@ cd selenium-java
 mvn -q -DskipTests=false test
 ```
 
-## 🧪 Test Plan Summary
+## Test Plan Summary
 See [docs/TEST_PLAN.md](docs/TEST_PLAN.md) for the complete plan.
 
 **Scope:**
@@ -30,7 +30,7 @@ See [docs/TEST_PLAN.md](docs/TEST_PLAN.md) for the complete plan.
 
 ---
 
-## 🐛 Sample Bug Reports
+## Sample Bug Reports
 See [docs/BUG_REPORTS.md](docs/BUG_REPORTS.md) for full details.
 
 ### Example 1 – Invalid email accepted in Contact Form
@@ -46,7 +46,7 @@ See [docs/BUG_REPORTS.md](docs/BUG_REPORTS.md) for full details.
 
 ---
 
-## 🧩 Framework Highlights
+## Framework Highlights
 - Dual-stack: **Playwright + TypeScript** and **Selenium 4 + Java 21**
 - CI-ready via GitHub Actions
 - Deterministic waits, page objects, data-driven setup

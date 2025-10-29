@@ -62,28 +62,28 @@ Test Types
 Sample Bug Reports
 See docs/BUG_REPORTS.md for the detailed list.
 
-BUG-001 – Contact form accepts invalid email
-
+**BUG-001 – Contact form accepts invalid email
+**
 Severity: Medium
 
 Expected: Validation prevents submission.
 
 Actual: Form submits successfully.
 
-BUG-002 – Admin room name accepts over 256 characters
-
+**BUG-002 – Admin room name accepts over 256 characters
+**
 Severity: Low
 
 Impact: Layout breaks; no input validation present.
 
-BUG-003 – Accessibility: Missing ARIA landmarks
-
+**BUG-003 – Accessibility: Missing ARIA landmarks
+**
 Severity: Low
 
 Impact: Affects screen reader usability; lacks semantic HTML.
 
-BUG-004 – Booking modal intermittently fails to close
-
+**BUG-004 – Booking modal intermittently fails to close
+**
 Severity: Medium
 
 Impact: Occasional UI inconsistency after success message.
